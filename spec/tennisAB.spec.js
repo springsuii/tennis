@@ -9,6 +9,10 @@ function tennis(){
     if(ScoreA === 0 && ScoreB === 0)
       return 'Love-Love';
   }
+  this.echoScore = function(){
+    if(ScoreA === 15 && ScoreB === 0)
+      return 'Fifteen-Love';
+  }
 
 }
 describe('Tennis', function () {
