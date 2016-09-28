@@ -107,4 +107,9 @@ describe('Tennis', function () {
     ten.scoreA();
     expect(ten.echoScore()).toEqual('Fifteen - Fifteen');
   });
+  it('check B WIN',function(){
+    ten.scoreB();
+    ten.scoreA();
+    expect(ten.echoScore()).toEqual('Thirty - Thirty');
+  });
 });
