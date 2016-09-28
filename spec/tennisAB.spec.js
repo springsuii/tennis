@@ -25,6 +25,8 @@ function tennis(){
         return 'Thirty - Love';
     else if(ScoreA === 40 && ScoreB === 0)
         return 'Fourty - Love';
+    else if(ScoreA === 50 && ScoreB === 0)
+            return 'A WIN';
   }
 }
 describe('Tennis', function () {
@@ -41,8 +43,12 @@ describe('Tennis', function () {
     ten.scoreA();
     expect(ten.echoScore()).toEqual('Thirty - Love');
   });
-  it('check score A 30 - B 0 echo Thirty - love',function(){
+  it('check score A 40 - B 0 echo Fourty - love',function(){
     ten.scoreA();
     expect(ten.echoScore()).toEqual('Fourty - Love');
+  });
+  it('check A WIN',function(){
+    ten.scoreA();
+    expect(ten.echoScore()).toEqual('A WIN');
   });
 });
