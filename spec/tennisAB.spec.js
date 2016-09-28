@@ -8,10 +8,12 @@ function tennis(){
   this.scoreA = function(){
     if(ScoreA === 0)
         ScoreA = 15;
-    else if(ScoreA === 0)
+    else if(ScoreA === 15)
         ScoreA = 30;
-    else if(ScoreA === 0)
+    else if(ScoreA === 30)
         ScoreA = 40;
+    else
+        ScoreA = 50;
     return ScoreA;
   }
   this.echoScore = function(){
@@ -22,14 +24,12 @@ function tennis(){
   }
 }
 describe('Tennis', function () {
-  it('Start Game score 0 - 0 echo Love - Love', function () {
     var ten = new tennis();
+  it('Start Game score 0 - 0 echo Love - Love', function () {
     ten.startGame();
     expect(ten.echoScore()).toEqual('Love - Love');
   });
   it('check score A 15 - B 0 echo fifteen - love',function(){
-    var ten = new tennis();
-    ten.startGame();
     ten.scoreA();
     expect(ten.echoScore()).toEqual('Fifteen - Love');
   });
