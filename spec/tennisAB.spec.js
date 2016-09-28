@@ -21,6 +21,8 @@ function tennis(){
       return 'Love - Love';
     else if(ScoreA === 15 && ScoreB === 0)
       return 'Fifteen - Love';
+    else if(ScoreA === 30 && ScoreB === 0)
+        return 'Thirty - Love';
   }
 }
 describe('Tennis', function () {
@@ -32,5 +34,9 @@ describe('Tennis', function () {
   it('check score A 15 - B 0 echo fifteen - love',function(){
     ten.scoreA();
     expect(ten.echoScore()).toEqual('Fifteen - Love');
+  });
+  it('check score A 30 - B 0 echo Thirty - love',function(){
+    ten.scoreA();
+    expect(ten.echoScore()).toEqual('Thirty - Love');
   });
 });
