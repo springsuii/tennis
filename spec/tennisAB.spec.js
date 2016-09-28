@@ -92,4 +92,8 @@ describe('Tennis', function () {
     ten.scoreB();
     expect(ten.echoScore()).toEqual('Love - Fourty');
   });
+  it('check B WIN',function(){
+    ten.scoreB();
+    expect(ten.echoScore()).toEqual('B WIN');
+  });
 });
