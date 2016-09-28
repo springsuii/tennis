@@ -102,12 +102,12 @@ describe('Tennis', function () {
     expect(ten.echoScore()).toEqual('B WIN');
   });
   //caseScoreNonZero
-  it('check B WIN',function(){
+  it('check score A 15 - B 15 echo Fifteen - Fifteen',function(){
     ten.scoreB();
     ten.scoreA();
     expect(ten.echoScore()).toEqual('Fifteen - Fifteen');
   });
-  it('check B WIN',function(){
+  it('check score A 30 - B 30 echo Thirty - Thirty',function(){
     ten.scoreB();
     ten.scoreA();
     expect(ten.echoScore()).toEqual('Thirty - Thirty');
