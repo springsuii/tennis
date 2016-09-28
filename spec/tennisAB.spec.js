@@ -19,8 +19,11 @@ function tennis(){
   this.scoreB = function(){
     if(ScoreB === 0)
       ScoreB = 15;
+    else if(ScoreB === 15)
+      ScoreB = 30;
   }
   this.echoScore = function(){
+    //caseA
     if(ScoreA === 0 && ScoreB === 0)
       return 'Love - Love';
     else if(ScoreA === 15 && ScoreB === 0)
@@ -34,12 +37,16 @@ function tennis(){
         ScoreB = 0;
         return 'A WIN';
     }
+    //caseB
     else if(ScoreA === 0 && ScoreB === 15)
       return 'Love - Fifteen';
+    else if(ScoreA === 0 && ScoreB === 30)
+        return 'Love - Thirty';
   }
 }
 describe('Tennis', function () {
     var ten = new tennis();
+    //caseA
   it('Start Game score 0 - 0 echo Love - Love', function () {
     ten.startGame();
     expect(ten.echoScore()).toEqual('Love - Love');
@@ -60,8 +67,13 @@ describe('Tennis', function () {
     ten.scoreA();
     expect(ten.echoScore()).toEqual('A WIN');
   });
-  it('check score A 0 - B 15 echo fifteen - love',function(){
+  //caseB
+  it('check score A 0 - B 15 echo love - Fifteen',function(){
     ten.scoreB();
     expect(ten.echoScore()).toEqual('Love - Fifteen');
+  });
+  it('check score A 0 - B 30 echo love - Thirty',function(){
+    ten.scoreB();
+    expect(ten.echoScore()).toEqual('Love - Thirty');
   });
 });
