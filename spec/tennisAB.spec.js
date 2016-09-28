@@ -99,4 +99,10 @@ describe('Tennis', function () {
     ten.scoreB();
     expect(ten.echoScore()).toEqual('B WIN');
   });
+  //caseScoreNonZero
+  it('check B WIN',function(){
+    ten.scoreB();
+    ten.scoreA();
+    expect(ten.echoScore()).toEqual('Fifteen - Fifteen');
+  });
 });
