@@ -12,7 +12,7 @@ function tennis(){
         ScoreA = 30;
     else if(ScoreA === 30)
         ScoreA = 40;
-    else
+    else if(ScoreA === 40)
         ScoreA = 50;
     return ScoreA;
   }
@@ -23,6 +23,9 @@ function tennis(){
       ScoreB = 30;
     else if(ScoreB === 30)
       ScoreB = 40;
+    else if(ScoreB === 40)
+      ScoreB = 50;
+    return ScoreB;
   }
   this.echoScore = function(){
     //caseA
@@ -46,6 +49,11 @@ function tennis(){
       return 'Love - Thirty';
     else if(ScoreA === 0 && ScoreB === 40)
       return 'Love - Fourty';
+    else if(ScoreA === 0 && ScoreB === 50){
+        ScoreA = 0;
+        ScoreB = 0;
+        return 'B WIN';
+      }
   }
 }
 describe('Tennis', function () {
