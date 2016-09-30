@@ -55,9 +55,9 @@ function tennis(){
         return 'B WIN';
       }
     //caseNon0
-    else if(ScoreA === 15 && ScoreA === 15)
+    else if(ScoreA === 15 && ScoreB === 15)
       return 'Fifteen - Fifteen';
-    else if(ScoreA === 30 && ScoreA === 30)
+    else if(ScoreA === 30 && ScoreB === 30)
       return 'Thirty - Thirty';
   }
 }
